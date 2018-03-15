@@ -1,2 +1,2 @@
 # A repository of some React JS pages
-![alt text] (https://commons.wikimedia.org/wiki/File:React-icon.svg)
+![alt text] (https://cdn-images-1.medium.com/max/1400/1*yk5D5cQB3jd7EiPzrDrD5w.png)
