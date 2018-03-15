@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>React Components</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+ <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+ <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+  <div id="container"></div>
+  <script type="text/babel">
+
+  //React Universe Component
+  class HelloUniverse extends React.Component {
+    render(){
+      return <p>Hello, {this.props.greetTarget}!</p>
+    }
+  }
+
+//Buttonify Component
+/*class Buttonify extends React.Component {
+  render(){
+    return(
+      <div>
+          <button type ={this.props.behavior}>{this.props.children}</button>
+      </div>
+    );
+  }
+}
+*/
+  //The Render method
+     ReactDOM.render(
+       <div>
+        <HelloUniverse greetTarget="Batman"/>
+        <HelloUniverse greetTarget="Superman"/>
+        <HelloUniverse greetTarget="Iron man"/>
+        <HelloUniverse greetTarget="Spider man"/>
+        <HelloUniverse greetTarget="Flash"/>
+        <HelloUniverse greetTarget="Green Lantern"/>
+      </div>
+      /*<div>
+        <Buttonify behavior="submit">SEND DATA</Buttonify>
+      </div>*/,
+      document.querySelector("#container")
+    );
+
+  </script>
+
+</body>
+</html>
