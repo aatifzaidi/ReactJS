@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <style>
+        /*Regular Style for the HTML components*/
+        #container{
+            color: brown;
+            text-align: center;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script type="text/babel">
+        class Stuff extends React.Component {
+            render() {
+                //JSX Styling by defining a Variable
+                var footerStyle={
+                    padding: 10,
+                    margine: 10,
+                    backgroundColor: "#000",
+                    color:"#FFF",
+                    fontFamily: "seif",
+                    fontSize:"18",
+                    textAlign: "Center"
+                };
+
+                return (
+                
+                    <React.Fragment>
+                    <p style={footerStyle}>The random number is generated below:</p>{/*JSX styling*/}
+                    <div>
+                    <h1>And we have {Math.random()*100} as our random number!</h1>{/*Regular Styling*/} 
+                    </div>,
+                    <p style={footerStyle}>A test of multiple elements.</p>{/*JSX styling*/}
+                    </React.Fragment>
+                    
+                );
+            }
+        };
+
+    ReactDOM.render(
+        <div>
+        <Stuff/>
+        </div>,
+        document.querySelector("#container")
+    );
+    </script>
+</body>
+</html>
